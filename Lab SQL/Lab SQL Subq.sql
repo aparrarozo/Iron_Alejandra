@@ -33,7 +33,7 @@ order by account_id limit 5;
 -- Q7 What are the account_ids with the lowest loan amount that have a loan duration of 60 in the loan table?
 select account_id from bank.loan
 where duration=60 
-order by amount; 
+order by amount limit 5;
 
 -- Q8 What are the unique values of k_symbol in the order table?
 select distinct k_symbol from bank.order
@@ -41,7 +41,7 @@ where k_symbol<>" "
 order by k_symbol;
 
 -- Q9 In the order table, what are the order_ids of the client with the account_id 34?
-select account_id, order_id from bank.order
+select order_id from bank.order
 where account_id="34";
 
 -- Q10 In the order table, which account_ids were responsible for orders between order_id 29540 and order_id 29560 (inclusive)?
