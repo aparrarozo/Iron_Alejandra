@@ -10,10 +10,7 @@ Select first_name, last_name from actor
 where actor_id = 107;
 
 -- Joining tables method
--- select * from film_actor as most_films
--- inner join actor as l on
--- most_films.actor_id = l.actor_id
--- order by count(film_id) desc
+--
 select a.actor_id, a.first_name, a.last_name, count(*) as most_films from actor as a
 inner join film_actor as b on 
 a.actor_id = b.actor_id
